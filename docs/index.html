@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>似合わせ診断と今日の運勢｜骨格×パーソナルカラー×星座</title>
+<meta name="description" content="骨格タイプとパーソナルカラーの診断結果に、星座から出す今日の運勢を重ねる、無料・登録不要の診断サイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffcf5; --surface:#ffffff; --ink:#2b2320; --muted:#8a7a6e;
+  --line:#e8ddd0; --accent:#a6272b; --gold:#c9a227;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-size:15px;line-height:1.8}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 64px}
+header.site{display:flex;align-items:baseline;justify-content:space-between;padding:18px 0 14px;border-bottom:2px solid var(--ink)}
+header.site .name{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;letter-spacing:.02em}
+header.site .cond{font-size:11px;color:var(--muted)}
+h1{font-family:"Noto Serif JP",serif;font-size:32px;line-height:1.45;margin:34px 0 10px;font-weight:700}
+.lede{color:var(--ink);margin:0 0 6px}
+.sub{color:var(--muted);font-size:13px;margin:0}
+.sample{position:relative;margin:30px 0 8px;min-height:196px}
+.card{position:absolute;width:78%;background:var(--surface);border:1px solid var(--line);padding:16px 18px}
+.card .cap{font-size:11px;color:var(--muted);margin:0 0 6px}
+.card .big{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;margin:0 0 4px}
+.card .line{font-size:13px;margin:0}
+.card-a{left:0;top:0}
+.card-b{right:0;top:88px;border-color:var(--ink)}
+.chip-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#6b7c59;vertical-align:-1px;margin-right:6px}
+.sample-note{font-size:11px;color:var(--muted);text-align:right;margin:0}
+.cta{display:block;margin:26px 0 0;background:var(--accent);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px}
+h2{font-family:"Noto Serif JP",serif;font-size:21px;margin:46px 0 6px;padding-top:22px;border-top:1px solid var(--line)}
+h2:first-of-type{border-top:none}
+.steps{margin:10px 0 0;padding:0;list-style:none}
+.steps li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.steps .num{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--accent);font-size:18px;min-width:28px}
+.steps p{margin:0}
+.steps .t{font-weight:700}
+.field{margin-top:22px}
+.field .flabel{font-weight:700;font-size:15px;margin:0 0 4px}
+.field .fnote{font-size:12px;color:var(--muted);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit}
+.chip.on{border-color:var(--accent);color:var(--accent);font-weight:700;background:rgba(166,39,43,.06)}
+.divider{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+.divider .dlabel{font-weight:700;margin:0 0 4px}
+.go{margin:30px 0 0;width:100%;background:var(--ink);color:#fff;border:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px;cursor:pointer;font-family:inherit}
+.go:disabled{opacity:.35;cursor:default}
+.result-types{font-family:"Noto Serif JP",serif;font-size:27px;font-weight:700;line-height:1.5;margin:12px 0 4px}
+.desc{margin:10px 0}
+.desc .dt{font-weight:700}
+.combo{background:var(--surface);border:1px solid var(--line);padding:14px 16px;margin:16px 0}
+.combo .cap{font-size:11px;color:var(--muted);margin:0 0 4px}
+.combo p{margin:0}
+.fortune{margin:22px 0 0;padding-top:18px;border-top:2px solid var(--ink)}
+.fortune .cap{font-size:12px;color:var(--muted);margin:0 0 6px}
+.fortune .big{font-family:"Noto Serif JP",serif;font-size:21px;font-weight:700;margin:0 0 6px}
+.fortune .note{font-size:12px;color:var(--muted);margin:0}
+.again{display:inline-block;margin-top:20px;color:var(--accent);font-weight:700;text-decoration:none}
+.notes p{font-size:13px;margin:8px 0}
+.notes .nt{font-weight:700;font-size:14px;margin-top:18px}
+footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <span class="name">似合わせ診断と今日の運勢</span>
+  <span class="cond">無料・登録不要</span>
+</header>
+
+<section>
+  <h1>似合うの輪郭に、<br>今日の追い風を。</h1>
+  <p class="lede">骨格タイプとパーソナルカラーで「似合う」の土台を知り、そこへ星座から出す今日の運勢を重ねます。</p>
+  <p class="sub">診断は傾向を知るためのもの、運勢は一日の味付け。どちらも、このページの中で完結します。</p>
+
+  <div class="sample" aria-hidden="true">
+    <div class="card card-a">
+      <p class="cap">診断結果のサンプル</p>
+      <p class="big">ウェーブ × ブルベ夏</p>
+      <p class="line">柔らかな線に淡い色。穏やかでフェミニンな印象に。</p>
+    </div>
+    <div class="card card-b">
+      <p class="cap">今日の運勢のサンプル（占い）</p>
+      <p class="line"><span class="chip-dot"></span>オリーブのリップをひと塗り</p>
+    </div>
+  </div>
+  <p class="sample-note">カードは表示のサンプルです</p>
+
+  <a class="cta" href="#diagnosis">診断をはじめる</a>
+</section>
+
+<section>
+  <h2>進み方</h2>
+  <ol class="steps">
+    <li><span class="num">1</span><p><span class="t">診断</span>　知っている項目を選ぶだけ。分からない項目は空けて構いません。</p></li>
+    <li><span class="num">2</span><p><span class="t">結果</span>　あなたのタイプと、骨格×カラーの掛け合わせで見える印象が出ます。</p></li>
+    <li><span class="num">3</span><p><span class="t">今日の運勢</span>　星座と日付で決まる、今日だけの色とアイテム。診断の色の範囲に寄せて出します。</p></li>
+  </ol>
+</section>
+
+<section id="diagnosis">
+  <h2>診断</h2>
+  <p class="sub">料金はかかりません。アカウント登録も不要で、選んだ内容はこの端末の中にだけ保存されます（送信はされません）。</p>
+
+  <div class="field">
+    <p class="flabel">骨格タイプ</p>
+    <div class="chips" data-group="bone">
+      <button type="button" class="chip" data-value="ストレート">ストレート</button>
+      <button type="button" class="chip" data-value="ウェーブ">ウェーブ</button>
+      <button type="button" class="chip" data-value="ナチュラル">ナチュラル</button>
+    </div>
+  </div>
+
+  <div class="field">
+    <p class="flabel">パーソナルカラー</p>
+    <div class="chips" data-group="pc">
+      <button type="button" class="chip" data-value="イエベ春">イエベ春</button>
+      <button type="button" class="chip" data-value="ブルベ夏">ブルベ夏</button>
+      <button type="button" class="chip" data-value="イエベ秋">イエベ秋</button>
+      <button type="button" class="chip" data-value="ブルベ冬">ブルベ冬</button>
+    </div>
+  </div>
+
+  <div class="divider">
+    <p class="dlabel">占い｜今日の運勢</p>
+    <p class="field fnote" style="margin:0 0 10px">星座は診断ではなく、今日の運勢（占い）の材料です。診断の結果には影響しません。</p>
+    <div class="chips" data-group="sign">
+      <button type="button" class="chip" data-value="牡羊座">牡羊座</button>
+      <button type="button" class="chip" data-value="牡牛座">牡牛座</button>
+      <button type="button" class="chip" data-value="双子座">双子座</button>
+      <button type="button" class="chip" data-value="蟹座">蟹座</button>
+      <button type="button" class="chip" data-value="獅子座">獅子座</button>
+      <button type="button" class="chip" data-value="乙女座">乙女座</button>
+      <button type="button" class="chip" data-value="天秤座">天秤座</button>
+      <button type="button" class="chip" data-value="蠍座">蠍座</button>
+      <button type="button" class="chip" data-value="射手座">射手座</button>
+      <button type="button" class="chip" data-value="山羊座">山羊座</button>
+      <button type="button" class="chip" data-value="水瓶座">水瓶座</button>
+      <button type="button" class="chip" data-value="魚座">魚座</button>
+    </div>
+  </div>
+
+  <button type="button" class="go" id="go" disabled>結果を見る</button>
+  <p class="sub" style="margin-top:8px">骨格とパーソナルカラーのどちらか一方でも、結果が出ます。</p>
+</section>
+
+<section id="result" hidden>
+  <h2>結果</h2>
+  <p class="result-types" id="resultTypes"></p>
+  <div id="resultDescs"></div>
+  <div class="combo" id="comboBox" hidden>
+    <p class="cap">骨格 × パーソナルカラーの掛け合わせ</p>
+    <p id="comboText"></p>
+  </div>
+  <div class="fortune">
+    <p class="cap" id="fortuneCap">今日の運勢（占い）</p>
+    <p class="big" id="fortuneLine"></p>
+    <p class="note" id="fortuneNote"></p>
+    <p class="note" style="margin-top:6px">占いは娯楽として出しています。運勢が診断の結果を変えることはありません。</p>
+  </div>
+  <a class="again" href="#diagnosis" id="again">選び直す</a>
+</section>
+
+<section class="notes">
+  <h2>ご利用の前に</h2>
+  <p class="nt">料金と条件</p>
+  <p>すべて無料です。登録・ログインは不要で、入力した内容がサーバーへ送られることはありません。結果はこの端末に保存され、次に開いたときも表示されます。</p>
+  <p class="nt">診断について</p>
+  <p>ここでの診断は、自分のタイプをすでに知っている方が選ぶ「自己申告式」です。結果は似合う傾向の目安であり、断定するものではありません。</p>
+  <p class="nt">占いについて</p>
+  <p>今日の運勢は、星座と日付から機械的に決まる娯楽要素です。同じ日・同じ星座では、誰が見ても同じ内容になります。</p>
+</section>
+
+<footer class="site">
+  <p>似合わせ診断と今日の運勢（検証版）</p>
+</footer>
+
+</div>
+<script>
+(function(){
+  var KEY = "shindan-fortune.v1";
+  var SIGNS = ["牡羊座","牡牛座","双子座","蟹座","獅子座","乙女座","天秤座","蠍座","射手座","山羊座","水瓶座","魚座"];
+  var BONE_DESC = {
+    "ストレート": "厚みのある上半身に、すっきりした直線のシルエットが映えるタイプ。ハリのある素材とシンプルな形が得意です。",
+    "ウェーブ": "柔らかな曲線と華奢な骨格が特徴。軽い素材や、ウエストまわりの変化で柔らかさが生きるタイプです。",
+    "ナチュラル": "骨の存在感とラフな質感が魅力。ゆとりのある形や、天然素材の風合いが似合うタイプです。"
+  };
+  var PC_DESC = {
+    "イエベ春": "明るく澄んだ色が、顔を華やかに見せるグループ。温かみのあるクリアな色が得意です。",
+    "ブルベ夏": "淡く柔らかな色で、透明感が出るグループ。涼しげでスモーキーな色が得意です。",
+    "イエベ秋": "深みと温かみのある色で、落ち着いた華やかさが出るグループ。こっくりした色が得意です。",
+    "ブルベ冬": "鮮やかで澄んだ色が映えるグループ。はっきりした色とコントラストが得意です。"
+  };
+  var COMBO = {
+    "ストレート": {
+      "イエベ春": "ハリのある形に明るい色。元気で洗練された印象になります。",
+      "ブルベ夏": "直線の形に淡い色。上品で涼やかな印象になります。",
+      "イエベ秋": "すっきりした形に深い色。大人っぽく知的な印象になります。",
+      "ブルベ冬": "直線と強い色。シャープで現代的な印象になります。"
+    },
+    "ウェーブ": {
+      "イエベ春": "軽い素材に明るい色。可憐で軽やかな印象になります。",
+      "ブルベ夏": "柔らかな線に淡い色。穏やかでフェミニンな印象になります。",
+      "イエベ秋": "柔らかな形に温かい色。ぬくもりのある優しい印象になります。",
+      "ブルベ冬": "曲線に澄んだ色。繊細なのに凛とした印象になります。"
+    },
+    "ナチュラル": {
+      "イエベ春": "ゆとりの形に明るい色。のびやかで健やかな印象になります。",
+      "ブルベ夏": "ラフな質感に淡い色。やわらかく落ち着いた印象になります。",
+      "イエベ秋": "天然素材の風合いに深い色。素朴で味わいのある印象になります。",
+      "ブルベ冬": "ゆとりの形に強い色。個性と芯の強さが出る印象になります。"
+    }
+  };
+  var COLORS_BY_PC = {
+    "イエベ春": ["コーラルピンク","ピーチオレンジ","ライトキャメル","イエローゴールド","ターコイズ","若草グリーン"],
+    "ブルベ夏": ["ローズピンク","ラベンダー","ソフトブルー","ミントグリーン","グレージュ","パールホワイト"],
+    "イエベ秋": ["テラコッタ","マスタード","オリーブ","バーガンディ","ブロンズ","ディープオレンジ"],
+    "ブルベ冬": ["ロイヤルブルー","ワインレッド","フューシャピンク","エメラルド","シルバーグレー","クリアレッド"]
+  };
+  var COLORS_BY_SEASON = {
+    spring: ["さくらピンク","ミモザイエロー","若草グリーン","スカイブルー","ピーチ","ライラック"],
+    summer: ["コーラル","ターコイズ","ホワイト","レモンイエロー","アクアブルー","ひまわりイエロー"],
+    autumn: ["ボルドー","マスタード","テラコッタ","オリーブ","キャメル","プラム"],
+    winter: ["ワインレッド","ロイヤルブルー","シルバーグレー","フューシャピンク","エメラルド","アイスブルー"]
+  };
+  var ITEMS = [
+    {name:"リップ", tail:"をひと塗り"},
+    {name:"ネイル", tail:"を指先に"},
+    {name:"チーク", tail:"をふわりと"},
+    {name:"アイシャドウ", tail:"をまぶたにひと色"},
+    {name:"スカーフ", tail:"を首元に"},
+    {name:"ポーチ", tail:"を持ち歩いて"}
+  ];
+  function seasonKey(){
+    var m = Number(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",month:"numeric"}).format(new Date()));
+    if(m>=3 && m<=5) return "spring";
+    if(m>=6 && m<=8) return "summer";
+    if(m>=9 && m<=11) return "autumn";
+    return "winter";
+  }
+  var state = {bone:"", pc:"", sign:""};
+  try{
+    var saved = JSON.parse(window.localStorage.getItem(KEY) || "null");
+    if(saved){ state.bone = saved.bone||""; state.pc = saved.pc||""; state.sign = saved.sign||""; }
+  }catch(e){}
+  var goBtn = document.getElementById("go");
+  function paint(){
+    document.querySelectorAll(".chips").forEach(function(group){
+      var g = group.getAttribute("data-group");
+      group.querySelectorAll(".chip").forEach(function(chip){
+        chip.classList.toggle("on", state[g] === chip.getAttribute("data-value"));
+      });
+    });
+    goBtn.disabled = !(state.bone || state.pc);
+  }
+  document.querySelectorAll(".chips").forEach(function(group){
+    var g = group.getAttribute("data-group");
+    group.querySelectorAll(".chip").forEach(function(chip){
+      chip.addEventListener("click", function(){
+        var v = chip.getAttribute("data-value");
+        state[g] = (state[g] === v) ? "" : v;
+        try{ window.localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){}
+        paint();
+      });
+    });
+  });
+  function fortune(){
+    var dayIdx = Math.floor(Date.now()/86400000);
+    var signIdx = state.sign ? SIGNS.indexOf(state.sign) : 0;
+    var palette = state.pc ? COLORS_BY_PC[state.pc] : COLORS_BY_SEASON[seasonKey()];
+    var color = palette[(dayIdx + signIdx*2) % palette.length];
+    var item = ITEMS[(dayIdx*2 + signIdx) % ITEMS.length];
+    return { color: color, item: item };
+  }
+  function render(){
+    if(!(state.bone || state.pc)){ document.getElementById("result").hidden = true; return; }
+    var parts = [];
+    if(state.bone) parts.push(state.bone);
+    if(state.pc) parts.push(state.pc);
+    document.getElementById("resultTypes").textContent = "あなたのタイプは " + parts.join(" × ");
+    var html = "";
+    if(state.bone) html += '<div class="desc"><span class="dt">骨格：'+state.bone+'</span>　'+BONE_DESC[state.bone]+'</div>';
+    if(state.pc) html += '<div class="desc"><span class="dt">パーソナルカラー：'+state.pc+'</span>　'+PC_DESC[state.pc]+'</div>';
+    document.getElementById("resultDescs").innerHTML = html;
+    var comboBox = document.getElementById("comboBox");
+    if(state.bone && state.pc){
+      comboBox.hidden = false;
+      document.getElementById("comboText").textContent = COMBO[state.bone][state.pc];
+    } else { comboBox.hidden = true; }
+    var f = fortune();
+    document.getElementById("fortuneCap").textContent = state.sign ? (state.sign + "の今日の運勢（占い）") : "今日の運勢（占い）";
+    document.getElementById("fortuneLine").textContent = f.color + "の" + f.item.name + f.item.tail;
+    document.getElementById("fortuneNote").textContent = state.pc
+      ? "色は、あなたのパーソナルカラーの範囲から選んでいます。"
+      : "色は、季節の色から選んでいます。パーソナルカラーを選ぶと、その範囲に寄せて出します。";
+    document.getElementById("result").hidden = false;
+  }
+  goBtn.addEventListener("click", function(){
+    render();
+    document.getElementById("result").scrollIntoView({behavior:"smooth"});
+  });
+  paint();
+  render();
+})();
+</script>
+</body>
+</html>
