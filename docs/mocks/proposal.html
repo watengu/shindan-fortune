@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【提案1案】似合わせ診断と今日の運勢｜LP設計</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffcf5;--ink:#2b2320;--muted:#8a7a6e;--line:#e8ddd0;--accent:#a6272b;--gold:#c9a227}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.85}
+.mockbar{background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:8px 12px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 56px}
+.fv{position:relative;margin:0 -20px}
+.fv img{width:100%;height:64vh;object-fit:cover;display:block}
+.fv .overlay{position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(transparent,rgba(43,35,32,.8));color:#fff}
+.fv h1{font-family:"Noto Serif JP",serif;font-size:30px;line-height:1.5;margin:0 0 6px}
+.fv p{margin:0;font-size:14px}
+.cond{font-size:12px;color:var(--muted);text-align:center;margin:10px 0 0}
+.cta{display:block;margin:18px 0 0;background:var(--accent);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px}
+.today{margin:22px 0 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:12px 2px;display:flex;gap:12px;align-items:baseline}
+.today .lab{font-weight:700;white-space:nowrap}
+.today .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#6b7c59;vertical-align:-1px;margin-right:6px}
+h2{font-family:"Noto Serif JP",serif;font-size:21px;margin:46px 0 8px;padding-top:22px;border-top:1px solid var(--line)}
+.qcard{border:1px solid var(--ink);background:#fff;padding:18px;margin:16px 0}
+.qcard .part{font-size:12px;color:var(--muted);margin:0}
+.qcard .qq{font-weight:700;font-size:16px;margin:4px 0 6px}
+.qcard .key{font-size:13px;margin:0 0 12px}
+.qopts{display:flex;gap:8px}
+.qopt{flex:1;border:1px solid var(--line);background:var(--bg);padding:10px;font-size:12px;text-align:center}
+table.matrix{width:100%;border-collapse:collapse;margin:14px 0;font-size:12px}
+table.matrix th,table.matrix td{border:1px solid var(--line);padding:8px 6px;text-align:center;background:#fff}
+table.matrix th{background:var(--bg);font-weight:700}
+table.matrix td.hl{background:rgba(166,39,43,.07);font-weight:700}
+.sample{background:#fff;border:1px solid var(--line);padding:18px;margin:14px 0}
+.sample .cap{font-size:11px;color:var(--muted);margin:0 0 4px}
+.sample .big{font-family:"Noto Serif JP",serif;font-size:22px;font-weight:700;margin:0 0 6px}
+.sample p{margin:6px 0}
+.sample .fortune{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}
+.module{border-top:2px solid var(--ink);margin-top:46px;padding-top:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chip{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px}
+.flabel{font-weight:700;margin:14px 0 0}
+.faq dt{font-weight:700;margin-top:16px}.faq dd{margin:4px 0 0}
+.note{font-size:12px;color:var(--muted)}
+footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="mockbar">提案モック（1案）｜ベンチマーク分解に基づくLP設計</div>
+<div class="wrap">
+  <div class="fv">
+    <img src="assets/photo-a.webp" alt="2種類の布地を比べる手元">
+    <div class="overlay">
+      <h1>「なんか似合わない」には、<br>理由があります。</h1>
+      <p>骨格と色。2つの軸を重ねると、理由は見えてきます。ついでに、今日の色も付いてきます。</p>
+    </div>
+  </div>
+  <a class="cta" href="#module">診断をはじめる</a>
+  <p class="cond">無料・登録不要／選んだ内容はこの端末にだけ保存されます</p>
+
+  <div class="today">
+    <span class="lab">今日の運勢（占い）</span>
+    <span><span class="dot"></span>オリーブのリップをひと塗り</span>
+  </div>
+  <p class="note" style="margin-top:6px">今日の色は毎日変わります。あなたの似合う範囲に寄せた色は、診断の結果で出ます。</p>
+
+  <h2>中身を、先に見せます</h2>
+  <p>診断は、自分の体を観察して比べる作業です。たとえば最初のほうの質問は、こんな形をしています。</p>
+  <div class="qcard">
+    <p class="part">首の長さ・鎖骨</p>
+    <p class="qq">鏡で首と鎖骨を見てください。どれが当てはまりますか？</p>
+    <p class="key">判断の鍵は、鎖骨が「目立つ／目立たない」です。</p>
+    <div class="qopts">
+      <div class="qopt">首は短め<br>鎖骨は目立たない</div>
+      <div class="qopt">首は細長く<br>鎖骨は華奢</div>
+      <div class="qopt">首は長め<br>鎖骨はしっかり目立つ</div>
+    </div>
+    <p class="note" style="margin-top:10px">質問サンプルの表示です。診断の方式そのものは確定後にこのモジュールへ差し込みます。</p>
+  </div>
+
+  <h2>重ねると、立体的に見えてくる</h2>
+  <p>1つの診断だけでは見えない「似合う」も、骨格×カラーを重ねると輪郭が立ち上がります。あなたのセルは、どれでしょう。</p>
+  <table class="matrix">
+    <tr><th>骨格 × カラー</th><th>イエベ春</th><th>ブルベ夏</th><th>イエベ秋</th><th>ブルベ冬</th></tr>
+    <tr><th>ストレート</th><td>華やか・元気</td><td>上品・涼やか</td><td>大人・知的</td><td>シャープ・現代的</td></tr>
+    <tr><th>ウェーブ</th><td>可憐・軽やか</td><td class="hl">柔らか・フェミニン</td><td>ぬくもり・優しい</td><td>繊細・凛</td></tr>
+    <tr><th>ナチュラル</th><td>のびやか・健やか</td><td>やわらか・落ち着き</td><td>素朴・風合い</td><td>個性・芯</td></tr>
+  </table>
+  <p class="note">色の付いたセルは、下の結果サンプルの組み合わせです。</p>
+
+  <div class="module" id="module">
+    <h2 style="border:none;padding:0;margin-top:0">診断</h2>
+    <p class="note">診断モジュール（方式は確定後に差し替える前提の置き場です）。</p>
+    <p class="flabel">骨格タイプ</p>
+    <div class="chips"><span class="chip">ストレート</span><span class="chip">ウェーブ</span><span class="chip">ナチュラル</span></div>
+    <p class="flabel">パーソナルカラー</p>
+    <div class="chips"><span class="chip">イエベ春</span><span class="chip">ブルベ夏</span><span class="chip">イエベ秋</span><span class="chip">ブルベ冬</span></div>
+    <p class="flabel">星座（占い用）</p>
+    <div class="chips"><span class="chip">牡羊座</span><span class="chip">牡牛座</span><span class="chip">双子座</span><span class="chip">蟹座</span><span class="chip">獅子座</span><span class="chip">乙女座</span><span class="chip">天秤座</span><span class="chip">蠍座</span><span class="chip">射手座</span><span class="chip">山羊座</span><span class="chip">水瓶座</span><span class="chip">魚座</span></div>
+    <a class="cta" href="#sample-result">結果を見る</a>
+  </div>
+
+  <h2 id="sample-result">結果は、こう出ます</h2>
+  <div class="sample">
+    <p class="cap">結果サンプル</p>
+    <p class="big">ウェーブ × ブルベ夏</p>
+    <p>骨格ウェーブ：柔らかな曲線と華奢な骨格。軽い素材や、ウエストまわりの変化で柔らかさが生きるタイプです。</p>
+    <p>ブルベ夏：淡く柔らかな色で透明感が出るグループ。涼しげでスモーキーな色が得意です。</p>
+    <p>掛け合わせ：柔らかな線に淡い色。穏やかでフェミニンな印象になります。</p>
+    <div class="fortune">
+      <p class="cap">今日の運勢（占い）</p>
+      <p style="margin:0"><span class="dot" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#6b7c59;vertical-align:-1px;margin-right:6px"></span>ミントグリーンのアイシャドウをまぶたにひと色（色はブルベ夏の範囲から選んでいます）</p>
+    </div>
+  </div>
+  <p>結果はこの端末に保存されます。明日開けば、タイプはそのまま、今日の運勢だけが新しい色に変わっています。</p>
+
+  <h2>診断との付き合い方</h2>
+  <dl class="faq">
+    <dt>結果は、絶対ですか？</dt><dd>絶対ではありません。診断は「着てはいけないもの」のリストではなく、迷ったときの羅針盤です。傾向として受け取って、たまに外して着る自由も含めて楽しんでください。</dd>
+    <dt>タイプは変わりますか？</dt><dd>骨格は生涯変わりません。パーソナルカラーは、年齢による肌の変化で印象が少し変わることがあります。</dd>
+    <dt>占いは、診断とどう関係しますか？</dt><dd>関係は「色」だけです。運勢は診断を上書きしません。似合う範囲の中から、今日の1色を選ぶための娯楽です。</dd>
+    <dt>料金と登録は？</dt><dd>無料・登録不要です。入力がサーバーに送られることはありません。</dd>
+  </dl>
+
+  <a class="cta" href="#module">自分の組み合わせを見に行く</a>
+  <p class="cond">明日は、今日の運勢の色が変わっています。</p>
+
+  <footer>似合わせ診断と今日の運勢（検証版）／提案モック</footer>
+</div>
+</body>
+</html>
