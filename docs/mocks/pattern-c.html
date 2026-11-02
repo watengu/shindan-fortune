@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【モックC】色先行・単一出口型LP｜似合わせ診断と今日の運勢</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--ink:#2b2320;--muted:#8a7a6e;--line:#e8ddd0;--gold:#c9a227;--accent:#a6272b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.85}
+.mockbar{background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:8px 12px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 56px}
+.fv{position:relative;margin:0 -20px}
+.fv img{width:100%;height:62vh;object-fit:cover;display:block}
+.fv .overlay{position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(transparent,rgba(43,35,32,.72));color:#fff}
+.fv h1{font-family:"Noto Serif JP",serif;font-size:29px;line-height:1.5;margin:0 0 6px}
+.fv p{margin:0;font-size:14px}
+.cta{display:block;margin:22px 0 0;background:var(--ink);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px}
+h2{font-family:"Noto Serif JP",serif;font-size:21px;margin:44px 0 8px;padding-top:22px;border-top:1px solid var(--line)}
+.grounds p{margin:12px 0}.grounds .gt{font-weight:700}
+.today{text-align:center;padding:10px 0 0}
+.today .swatch{width:170px;height:170px;border-radius:50%;background:#6b7c59;border:3px solid var(--gold);margin:14px auto 8px}
+.today .fl{font-family:"Noto Serif JP",serif;font-size:21px;font-weight:700;margin:0}
+.today .cap{font-size:12px;color:var(--muted);margin:0}
+.palette{display:flex;gap:10px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+.palette .p{text-align:center;font-size:11px;color:var(--muted)}
+.palette .d{width:44px;height:44px;border-radius:50%;margin:0 auto 4px}
+.palette .ring{border:3px solid var(--gold)}
+.steps{list-style:none;margin:8px 0 0;padding:0}
+.steps li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.steps .num{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--gold);font-size:18px;min-width:28px}
+.steps p{margin:0}.steps .t{font-weight:700}
+.faq dt{font-weight:700;margin-top:16px}.faq dd{margin:4px 0 0}
+.module{border-top:2px solid var(--ink);margin-top:44px;padding-top:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chip{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px}
+.flabel{font-weight:700;margin:14px 0 0}
+.note{font-size:12px;color:var(--muted)}
+footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="mockbar">デザインモック C｜色先行・単一出口型（構造の核：miyucolor の開運カラー）</div>
+<div class="wrap">
+  <div class="fv">
+    <img src="assets/photo-c.webp" alt="オリーブ色のリップとスウォッチ">
+    <div class="overlay">
+      <h1>今日着る色は、<br>もう決まっています。</h1>
+      <p>似合う色の範囲は決まっている。その中から今日の1色を選ぶのは、運勢の仕事です。色が先、説明は後。</p>
+    </div>
+  </div>
+
+  <div class="today">
+    <p class="cap">今日の色（占い）</p>
+    <div class="swatch"></div>
+    <p class="fl">オリーブのリップをひと塗り</p>
+    <p class="cap">色は、あなたの似合う範囲の中から選ばれています</p>
+  </div>
+  <a class="cta" href="#palette">自分の色の範囲を見る</a>
+
+  <h2>なぜ「色」で全部返せるのか</h2>
+  <div class="grounds">
+    <p><span class="gt">似合う色の範囲は、人ごとに決まっています。</span>パーソナルカラーは、その範囲の名前です。範囲の外の色は、どれだけ流行でも顔色を下げます。</p>
+    <p><span class="gt">開運色は、その範囲の中から選びます。</span>世間のラッキーカラーをそのまま勧めると、似合わない色を着ることになりかねません。ここでは範囲の外の色は出しません。</p>
+    <p><span class="gt">だから出口は1つでいい。</span>診断も運勢も、最後は「今日どの色を使うか」に重なります。タイプ名は、色の後ろについてくる説明です。</p>
+  </div>
+
+  <h2 id="palette">色の範囲と、今日の1色</h2>
+  <p>下はブルベ夏の範囲の例です。金の輪が付いた色が、今日の運勢で選ばれた1色。範囲そのものは診断で決まり、輪の位置は毎日変わります。</p>
+  <div class="palette">
+    <div class="p"><div class="d" style="background:#d9a7b0"></div>ローズピンク</div>
+    <div class="p"><div class="d" style="background:#b9a8d9"></div>ラベンダー</div>
+    <div class="p"><div class="d" style="background:#a8bedd"></div>ソフトブルー</div>
+    <div class="p"><div class="d ring" style="background:#b7d3c5"></div>ミントグリーン</div>
+    <div class="p"><div class="d" style="background:#c9beb2"></div>グレージュ</div>
+    <div class="p"><div class="d" style="background:#f2ede6;border:1px solid var(--line)"></div>パールホワイト</div>
+  </div>
+  <p class="note" style="text-align:center">金の輪 = 今日の運勢（占い）。範囲 = 診断。2つは重なって初めて「今日の色」になります。</p>
+
+  <h2>流れ</h2>
+  <ol class="steps">
+    <li><span class="num">1</span><p><span class="t">今日の色を見る</span>　開いた瞬間に、その日の1色が出ています。</p></li>
+    <li><span class="num">2</span><p><span class="t">自分の範囲を知る</span>　色の範囲（と骨格）は、下のモジュールで確かめます。</p></li>
+    <li><span class="num">3</span><p><span class="t">毎朝、輪が動く</span>　範囲は変わらず、今日の1色だけが日替わりで変わります。</p></li>
+  </ol>
+
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>料金はかかりますか？</dt><dd>かかりません。登録やログインも不要です。</dd>
+    <dt>タイプ名は出ないのですか？</dt><dd>出ます。ただ主役は色です。タイプ名と説明は、色を選んだ後に付いてきます。</dd>
+    <dt>運勢の色が似合わない色になることは？</dt><dd>ありません。運勢は必ず、あなたの似合う範囲の中から選びます。</dd>
+    <dt>占いは当たりますか？</dt><dd>占いは娯楽として付けています。色選びのきっかけとして使ってください。</dd>
+  </dl>
+
+  <div class="module" id="module">
+    <h2 style="border:none;padding:0;margin-top:0">自分の色の範囲を知る</h2>
+    <p class="note">ここが診断モジュールです（方式は確定後に差し替える前提の置き場）。</p>
+    <p class="flabel">パーソナルカラー</p>
+    <div class="chips"><span class="chip">イエベ春</span><span class="chip">ブルベ夏</span><span class="chip">イエベ秋</span><span class="chip">ブルベ冬</span></div>
+    <p class="flabel">骨格タイプ</p>
+    <div class="chips"><span class="chip">ストレート</span><span class="chip">ウェーブ</span><span class="chip">ナチュラル</span></div>
+    <a class="cta" href="#">範囲を決めて、今日の色を見る</a>
+    <p class="note" style="margin-top:8px">無料・登録不要。入力がサーバーへ送られることはありません。</p>
+  </div>
+
+  <footer>似合わせ診断と今日の運勢（検証版）／モックC</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【モックB】全開示グリッド型LP｜似合わせ診断と今日の運勢</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--soft:#f3ede3;--ink:#33302c;--muted:#8a7a6e;--line:#e3d9c8;--accent:#a6272b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.85}
+.mockbar{background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:8px 12px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 90px}
+.fv{position:relative;margin:0 -20px}
+.fv img{width:100%;height:62vh;object-fit:cover;display:block}
+.fv .overlay{position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(transparent,rgba(51,48,44,.8));color:#fff}
+.fv h1{font-family:"Noto Serif JP",serif;font-size:29px;line-height:1.5;margin:0 0 6px}
+.fv p{margin:0;font-size:14px}
+.cta{display:block;margin:22px 0 0;background:var(--accent);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px}
+h2{font-family:"Noto Serif JP",serif;font-size:21px;margin:44px 0 8px;padding-top:22px;border-top:1px solid var(--line)}
+.grounds p{margin:12px 0}.grounds .gt{font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.cell{border:1px solid var(--line);background:var(--soft);padding:10px;min-height:104px}
+.cell .combo{font-weight:700;font-size:13px;line-height:1.5}
+.cell .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-bottom:4px}
+.cell .line{font-size:11px;color:var(--ink);line-height:1.6;margin:4px 0 0}
+.steps{list-style:none;margin:8px 0 0;padding:0}
+.steps li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.steps .num{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--accent);font-size:18px;min-width:28px}
+.steps p{margin:0}.steps .t{font-weight:700}
+.faq dt{font-weight:700;margin-top:16px}.faq dd{margin:4px 0 0}
+.module{border-top:2px solid var(--ink);margin-top:44px;padding-top:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chip{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px}
+.flabel{font-weight:700;margin:14px 0 0}
+.note{font-size:12px;color:var(--muted)}
+.strip{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid var(--ink);padding:10px 14px;font-size:13px}
+.strip .lab{font-weight:700;margin-right:8px}
+.strip .signs{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden}
+footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="mockbar">デザインモック B｜全開示グリッド型（構造の核：ベイクルーズの組み合わせ結果ページ）</div>
+<div class="wrap">
+  <div class="fv">
+    <img src="assets/photo-b.webp" alt="4シーズンのカラードレープ">
+    <div class="overlay">
+      <h1>12通りの「似合う」を、<br>先に全部見せます。</h1>
+      <p>骨格3タイプ×カラー4タイプ。あなたの組み合わせは、この中のどれかです。隠さず並べるので、眺めるだけでも自分の当たりが付きます。</p>
+    </div>
+  </div>
+  <a class="cta" href="#atlas">12通りを見る</a>
+  <p class="note" style="text-align:center;margin-top:8px">無料・登録不要。結果は組み合わせごとに用意されています。</p>
+
+  <h2>なぜ組み合わせなのか</h2>
+  <div class="grounds">
+    <p><span class="gt">骨格だけでは、半分しか決まりません。</span>同じウェーブでも、似合う色が夏と冬では正反対になります。形と色は別々に知っても足りず、組み合わせで初めて「似合う」が決まります。</p>
+    <p><span class="gt">骨格は一生変わらないので、全通りを先に置けます。</span>太った・痩せたでは変わらない特徴だから、12通りの結果は誰にでも開かれた図鑑として並べられます。</p>
+    <p><span class="gt">他人のタイプを見るのも、自分の理解になります。</span>「あの人はこれが似合う」を眺めるうちに、自分の組み合わせの輪郭も見えてきます。</p>
+  </div>
+
+  <h2 id="atlas">12通りの図鑑</h2>
+  <p>気になる組み合わせを開くと、そのタイプの似合う理由と、今日の運勢まで一気に出ます。</p>
+  <div class="grid">
+    <div class="cell"><span class="dot" style="background:#e8a598"></span><div class="combo">ストレート<br>× イエベ春</div><p class="line">ハリのある形に明るい色。元気で洗練された印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#a8bedd"></span><div class="combo">ストレート<br>× ブルベ夏</div><p class="line">直線の形に淡い色。上品で涼やかな印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#b06a3b"></span><div class="combo">ストレート<br>× イエベ秋</div><p class="line">すっきりした形に深い色。大人っぽく知的な印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#31518c"></span><div class="combo">ストレート<br>× ブルベ冬</div><p class="line">直線と強い色。シャープで現代的な印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#f0b7a8"></span><div class="combo">ウェーブ<br>× イエベ春</div><p class="line">軽い素材に明るい色。可憐で軽やかな印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#b7c9de"></span><div class="combo">ウェーブ<br>× ブルベ夏</div><p class="line">柔らかな線に淡い色。穏やかでフェミニンな印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#c08a4e"></span><div class="combo">ウェーブ<br>× イエベ秋</div><p class="line">柔らかな形に温かい色。ぬくもりのある優しい印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#7d2a4e"></span><div class="combo">ウェーブ<br>× ブルベ冬</div><p class="line">曲線に澄んだ色。繊細なのに凛とした印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#a9c08a"></span><div class="combo">ナチュラル<br>× イエベ春</div><p class="line">ゆとりの形に明るい色。のびやかで健やかな印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#9db8ad"></span><div class="combo">ナチュラル<br>× ブルベ夏</div><p class="line">ラフな質感に淡い色。やわらかく落ち着いた印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#8a6d3b"></span><div class="combo">ナチュラル<br>× イエベ秋</div><p class="line">天然素材の風合いに深い色。素朴で味わいのある印象に。</p></div>
+    <div class="cell"><span class="dot" style="background:#2e4a7a"></span><div class="combo">ナチュラル<br>× ブルベ冬</div><p class="line">ゆとりの形に強い色。個性と芯の強さが出る印象に。</p></div>
+  </div>
+
+  <h2>流れ</h2>
+  <ol class="steps">
+    <li><span class="num">1</span><p><span class="t">眺める</span>　12通りを一覧で見て、気になる組み合わせを先に開く。</p></li>
+    <li><span class="num">2</span><p><span class="t">自分の組み合わせを選ぶ</span>　知っている人は直接、知らない人は手がかりから。</p></li>
+    <li><span class="num">3</span><p><span class="t">結果＋今日の運勢</span>　選んだ組み合わせの結果に、その日の運勢が付きます。</p></li>
+  </ol>
+
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>料金はかかりますか？</dt><dd>かかりません。登録やログインも不要です。</dd>
+    <dt>自分のタイプが分かりません。</dt><dd>図鑑を眺めて「近いかも」と思う組み合わせから開いてみてください。確かめる手段は今後ここに足します。</dd>
+    <dt>運勢はどこで見ますか？</dt><dd>画面の下に常に出ている帯で星座を選ぶと、今日の運勢が出ます。結果のページにも付きます。</dd>
+    <dt>占いは当たりますか？</dt><dd>占いは娯楽として付けています。その日の色選びのきっかけにどうぞ。</dd>
+  </dl>
+
+  <div class="module" id="module">
+    <h2 style="border:none;padding:0;margin-top:0">自分の組み合わせを選ぶ</h2>
+    <p class="note">ここが診断モジュールです（方式は確定後に差し替える前提の置き場）。</p>
+    <p class="flabel">骨格タイプ</p>
+    <div class="chips"><span class="chip">ストレート</span><span class="chip">ウェーブ</span><span class="chip">ナチュラル</span></div>
+    <p class="flabel">パーソナルカラー</p>
+    <div class="chips"><span class="chip">イエベ春</span><span class="chip">ブルベ夏</span><span class="chip">イエベ秋</span><span class="chip">ブルベ冬</span></div>
+    <a class="cta" href="#">この組み合わせの結果を見る</a>
+    <p class="note" style="margin-top:8px">無料・登録不要。入力がサーバーへ送られることはありません。</p>
+  </div>
+
+  <footer>似合わせ診断と今日の運勢（検証版）／モックB</footer>
+</div>
+<div class="strip"><span class="lab">今日の運勢（占い）</span><span class="signs">牡羊座 牡牛座 双子座 蟹座 獅子座 乙女座 天秤座 蠍座 射手座 山羊座 水瓶座 魚座</span></div>
+</body>
+</html>
