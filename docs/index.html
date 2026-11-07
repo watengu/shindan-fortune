@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>似合わせ診断と今日の運勢｜骨格×パーソナルカラー×星座</title>
-<meta name="description" content="骨格タイプとパーソナルカラーの診断結果に、星座から出す今日の運勢を重ねる、無料・登録不要の診断サイト。">
+<title>似合わせ診断と今日の運勢｜骨格×パーソナルカラー×開運バフ</title>
+<meta name="description" content="骨格タイプとパーソナルカラーの診断に、陰陽五行から出す今日の運勢と開運バフを重ねる、無料・登録不要の診断サイト。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ h1{font-family:"Noto Serif JP",serif;font-size:32px;line-height:1.45;margin:34px
 .card .line{font-size:13px;margin:0}
 .card-a{left:0;top:0}
 .card-b{right:0;top:88px;border-color:var(--ink)}
-.chip-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#6b7c59;vertical-align:-1px;margin-right:6px}
+.chip-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#68be8d;vertical-align:-1px;margin-right:6px}
 .sample-note{font-size:11px;color:var(--muted);text-align:right;margin:0}
 .cta{display:block;margin:26px 0 0;background:var(--accent);color:#fff;text-align:center;text-decoration:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px}
 h2{font-family:"Noto Serif JP",serif;font-size:21px;margin:46px 0 6px;padding-top:22px;border-top:1px solid var(--line)}
@@ -40,14 +40,31 @@ h2:first-of-type{border-top:none}
 .steps .num{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--accent);font-size:18px;min-width:28px}
 .steps p{margin:0}
 .steps .t{font-weight:700}
+.today{margin:8px 0 0}
+.today .cap{font-size:12px;color:var(--muted);margin:0 0 6px}
+.today .big{font-family:"Noto Serif JP",serif;font-size:24px;font-weight:700;margin:0 0 4px}
+.today .neko{margin:0 0 4px}
+.buffcard{background:var(--surface);border:1px solid var(--line);padding:14px 16px;margin:14px 0}
+.buffcard .cap{font-size:11px;color:var(--muted);margin:0 0 4px}
+.buffcard .bname{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;margin:0 0 4px}
+.buffcard p{margin:0}
+.buffcard .meta{font-size:13px;margin-top:8px}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid var(--line);vertical-align:-1px;margin-right:6px}
 .field{margin-top:22px}
 .field .flabel{font-weight:700;font-size:15px;margin:0 0 4px}
 .field .fnote{font-size:12px;color:var(--muted);margin:0 0 10px}
+.field input[type="date"]{font-family:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%;max-width:280px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit;text-align:left}
 .chip.on{border-color:var(--accent);color:var(--accent);font-weight:700;background:rgba(166,39,43,.06)}
-.divider{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
-.divider .dlabel{font-weight:700;margin:0 0 4px}
+.qbox{margin-top:22px;background:var(--surface);border:1px solid var(--line);padding:16px 18px}
+.qbox .qprog{font-size:11px;color:var(--muted);margin:0 0 6px}
+.qbox .qtext{font-weight:700;font-size:16px;margin:0 0 12px}
+.qback{display:inline-block;margin-top:14px;background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;font-family:inherit;padding:0;text-decoration:underline}
+.summary{background:var(--surface);border:1px solid var(--line);padding:14px 16px;margin:22px 0 0}
+.summary .cap{font-size:11px;color:var(--muted);margin:0 0 4px}
+.summary p{margin:0}
+.editlink{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700;text-decoration:none;cursor:pointer}
 .go{margin:30px 0 0;width:100%;background:var(--ink);color:#fff;border:none;font-weight:700;padding:15px 0;border-radius:999px;font-size:16px;cursor:pointer;font-family:inherit}
 .go:disabled{opacity:.35;cursor:default}
 .result-types{font-family:"Noto Serif JP",serif;font-size:27px;font-weight:700;line-height:1.5;margin:12px 0 4px}
@@ -60,6 +77,10 @@ h2:first-of-type{border-top:none}
 .fortune .cap{font-size:12px;color:var(--muted);margin:0 0 6px}
 .fortune .big{font-family:"Noto Serif JP",serif;font-size:21px;font-weight:700;margin:0 0 6px}
 .fortune .note{font-size:12px;color:var(--muted);margin:0}
+.enaema{margin:22px 0 0;background:var(--surface);border:1px solid var(--ink);padding:16px 18px}
+.enaema .cap{font-size:11px;color:var(--muted);margin:0 0 4px}
+.enaema p{margin:0}
+.enaema a{color:var(--accent);font-weight:700}
 .again{display:inline-block;margin-top:20px;color:var(--accent);font-weight:700;text-decoration:none}
 .notes p{font-size:13px;margin:8px 0}
 .notes .nt{font-weight:700;font-size:14px;margin-top:18px}
@@ -77,8 +98,8 @@ footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);fo
 
 <section>
   <h1>似合うの輪郭に、<br>今日の追い風を。</h1>
-  <p class="lede">骨格タイプとパーソナルカラーで「似合う」の土台を知り、そこへ星座から出す今日の運勢を重ねます。</p>
-  <p class="sub">診断は傾向を知るためのもの、運勢は一日の味付け。どちらも、このページの中で完結します。</p>
+  <p class="lede">骨格タイプとパーソナルカラーで「似合う」の土台を知り、そこへ陰陽五行から出す今日の運勢と、小さな開運アクションを重ねます。</p>
+  <p class="sub">運勢はプロフィールがなくても見られます。診断は傾向を知るためのもの、運勢は一日の味付け。どちらも、このページの中で完結します。</p>
 
   <div class="sample" aria-hidden="true">
     <div class="card card-a">
@@ -87,68 +108,64 @@ footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);fo
       <p class="line">柔らかな線に淡い色。穏やかでフェミニンな印象に。</p>
     </div>
     <div class="card card-b">
-      <p class="cap">今日の運勢のサンプル（占い）</p>
-      <p class="line"><span class="chip-dot"></span>オリーブのリップをひと塗り</p>
+      <p class="cap">今日のバフのサンプル</p>
+      <p class="line"><span class="chip-dot"></span>玄関を出る前に、今日やることを1つだけ声に出す</p>
     </div>
   </div>
   <p class="sample-note">カードは表示のサンプルです</p>
 
-  <a class="cta" href="#diagnosis">診断をはじめる</a>
+  <a class="cta" href="#today">今日の運勢を見る</a>
+</section>
+
+<section class="today" id="today">
+  <h2>今日の運勢</h2>
+  <p class="cap" id="todayDate"></p>
+  <p class="big" id="todayTheme"></p>
+  <p class="neko" id="todayNeko"></p>
+  <div class="buffcard">
+    <p class="cap" id="todayBuffCap">今日のバフ（一般版）</p>
+    <p class="bname" id="todayBuffName"></p>
+    <p id="todayBuffAction"></p>
+    <p class="meta" id="todayBuffMeta"></p>
+  </div>
+  <p class="sub">これはプロフィールを使わない一般版です。<a href="#diagnosis" style="color:var(--accent);font-weight:700">プロフィールを作る</a>と、あなたの診断タイプに合わせたバフに変わります。</p>
 </section>
 
 <section>
   <h2>進み方</h2>
   <ol class="steps">
-    <li><span class="num">1</span><p><span class="t">診断</span>　知っている項目を選ぶだけ。分からない項目は空けて構いません。</p></li>
-    <li><span class="num">2</span><p><span class="t">結果</span>　あなたのタイプと、骨格×カラーの掛け合わせで見える印象が出ます。</p></li>
-    <li><span class="num">3</span><p><span class="t">今日の運勢</span>　星座と日付で決まる、今日だけの色とアイテム。診断の色の範囲に寄せて出します。</p></li>
+    <li><span class="num">1</span><p><span class="t">今日の運勢</span>　日付で決まる今日のテーマとバフは、入力なしでそのまま見られます。</p></li>
+    <li><span class="num">2</span><p><span class="t">プロフィールと診断</span>　生年月日と、骨格・パーソナルカラーの小さな質問、顔印象の自己申告で、あなたのタイプが決まります。</p></li>
+    <li><span class="num">3</span><p><span class="t">結果</span>　タイプに今日のテーマを重ねて、あなた向けのバフ（小さな行動・ラッキーアイテム・ラッキーカラー）が出ます。</p></li>
   </ol>
 </section>
 
 <section id="diagnosis">
-  <h2>診断</h2>
-  <p class="sub">料金はかかりません。アカウント登録も不要で、選んだ内容はこの端末の中にだけ保存されます（送信はされません）。</p>
+  <h2>プロフィールと診断</h2>
+  <p class="sub">料金はかかりません。アカウント登録も不要で、入れた内容はこの端末の中にだけ保存されます（送信はされません）。あとから何度でも直せます。</p>
 
   <div class="field">
-    <p class="flabel">骨格タイプ</p>
-    <div class="chips" data-group="bone">
-      <button type="button" class="chip" data-value="ストレート">ストレート</button>
-      <button type="button" class="chip" data-value="ウェーブ">ウェーブ</button>
-      <button type="button" class="chip" data-value="ナチュラル">ナチュラル</button>
-    </div>
+    <p class="flabel">生年月日</p>
+    <p class="fnote">星座は生年月日から自動で決まります。プロフィールとして端末に保存されます。</p>
+    <input type="date" id="birth" min="1930-01-01" max="2020-12-31">
+    <p class="fnote" id="signLine" style="margin-top:8px"></p>
   </div>
 
-  <div class="field">
-    <p class="flabel">パーソナルカラー</p>
-    <div class="chips" data-group="pc">
-      <button type="button" class="chip" data-value="イエベ春">イエベ春</button>
-      <button type="button" class="chip" data-value="ブルベ夏">ブルベ夏</button>
-      <button type="button" class="chip" data-value="イエベ秋">イエベ秋</button>
-      <button type="button" class="chip" data-value="ブルベ冬">ブルベ冬</button>
-    </div>
+  <div class="summary" id="profileSummary" hidden>
+    <p class="cap">あなたのプロフィール</p>
+    <p id="summaryText"></p>
+    <a class="editlink" id="editProfile">プロフィールを編集する</a>
   </div>
 
-  <div class="divider">
-    <p class="dlabel">占い｜今日の運勢</p>
-    <p class="field fnote" style="margin:0 0 10px">星座は診断ではなく、今日の運勢（占い）の材料です。診断の結果には影響しません。</p>
-    <div class="chips" data-group="sign">
-      <button type="button" class="chip" data-value="牡羊座">牡羊座</button>
-      <button type="button" class="chip" data-value="牡牛座">牡牛座</button>
-      <button type="button" class="chip" data-value="双子座">双子座</button>
-      <button type="button" class="chip" data-value="蟹座">蟹座</button>
-      <button type="button" class="chip" data-value="獅子座">獅子座</button>
-      <button type="button" class="chip" data-value="乙女座">乙女座</button>
-      <button type="button" class="chip" data-value="天秤座">天秤座</button>
-      <button type="button" class="chip" data-value="蠍座">蠍座</button>
-      <button type="button" class="chip" data-value="射手座">射手座</button>
-      <button type="button" class="chip" data-value="山羊座">山羊座</button>
-      <button type="button" class="chip" data-value="水瓶座">水瓶座</button>
-      <button type="button" class="chip" data-value="魚座">魚座</button>
-    </div>
+  <div class="qbox" id="qbox" hidden>
+    <p class="qprog" id="qprog"></p>
+    <p class="qtext" id="qtext"></p>
+    <div class="chips" id="qopts"></div>
+    <button type="button" class="qback" id="qback" hidden>前の質問に戻る</button>
   </div>
 
   <button type="button" class="go" id="go" disabled>結果を見る</button>
-  <p class="sub" style="margin-top:8px">骨格とパーソナルカラーのどちらか一方でも、結果が出ます。</p>
+  <p class="sub" style="margin-top:8px">質問に答え終わると、結果が見られます。答えはあとから直せます。</p>
 </section>
 
 <section id="result" hidden>
@@ -160,22 +177,34 @@ footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);fo
     <p id="comboText"></p>
   </div>
   <div class="fortune">
-    <p class="cap" id="fortuneCap">今日の運勢（占い）</p>
-    <p class="big" id="fortuneLine"></p>
-    <p class="note" id="fortuneNote"></p>
-    <p class="note" style="margin-top:6px">占いは娯楽として出しています。運勢が診断の結果を変えることはありません。</p>
+    <p class="cap" id="fortuneCap">今日の運勢と開運バフ（占い）</p>
+    <p class="big" id="fortuneTheme"></p>
+    <p id="fortuneNeko" style="margin:0 0 6px"></p>
+    <p class="note" id="fortuneWhy"></p>
+    <div class="buffcard">
+      <p class="cap" id="buffCap"></p>
+      <p class="bname" id="buffName"></p>
+      <p id="buffAction"></p>
+      <p class="meta" id="buffMeta"></p>
+    </div>
+    <p class="note">占いは娯楽として出しています。効果を約束するものではなく、運勢が診断の結果を変えることもありません。</p>
   </div>
-  <a class="again" href="#diagnosis" id="again">選び直す</a>
+  <div class="enaema">
+    <p class="cap">もっと深く知りたい方へ</p>
+    <p>骨格×パーソナルカラー×顔印象の本格診断と、天気に合わせた「似合う」の提案は、<a href="https://enaema-ruddy.vercel.app" target="_blank" rel="noopener">Enaema（エナエマ）</a>で受けられます。</p>
+  </div>
+  <p class="sub" style="margin-top:18px">季節の変わり目や、体型・顔の印象が変わったと感じたら、プロフィールを見直してみてください。結果はその日のうちに新しいタイプで出ます。</p>
+  <a class="again" href="#diagnosis">プロフィールを見直す</a>
 </section>
 
 <section class="notes">
   <h2>ご利用の前に</h2>
   <p class="nt">料金と条件</p>
-  <p>すべて無料です。登録・ログインは不要で、入力した内容がサーバーへ送られることはありません。結果はこの端末に保存され、次に開いたときも表示されます。</p>
+  <p>すべて無料です。登録・ログインは不要で、入力した内容がサーバーへ送られることはありません。プロフィールはこの端末に保存され、いつでも再入力・修正できます。</p>
   <p class="nt">診断について</p>
-  <p>ここでの診断は、自分のタイプをすでに知っている方が選ぶ「自己申告式」です。結果は似合う傾向の目安であり、断定するものではありません。</p>
+  <p>骨格とパーソナルカラーは、短い質問への自己チェックで傾向を出す簡易診断です。結果は似合う傾向の目安であり、断定するものではありません。顔印象は自己申告です（写真の判定はしません）。</p>
   <p class="nt">占いについて</p>
-  <p>今日の運勢は、星座と日付から機械的に決まる娯楽要素です。同じ日・同じ星座では、誰が見ても同じ内容になります。</p>
+  <p>今日の運勢は、日付から機械的に決まる娯楽要素です。同じ日なら、誰が見ても同じテーマになります。そのうえで、診断タイプによって選ばれるバフが変わります。</p>
 </section>
 
 <footer class="site">
@@ -185,7 +214,9 @@ footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);fo
 </div>
 <script>
 (function(){
-  var KEY = "shindan-fortune.v1";
+  var KEY = "shindan-fortune.v2";
+  var BONES = ["ストレート","ウェーブ","ナチュラル"];
+  var PCS = ["イエベ春","ブルベ夏","イエベ秋","ブルベ冬"];
   var SIGNS = ["牡羊座","牡牛座","双子座","蟹座","獅子座","乙女座","天秤座","蠍座","射手座","山羊座","水瓶座","魚座"];
   var BONE_DESC = {
     "ストレート": "厚みのある上半身に、すっきりした直線のシルエットが映えるタイプ。ハリのある素材とシンプルな形が得意です。",
@@ -218,96 +249,292 @@ footer.site{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);fo
       "ブルベ冬": "ゆとりの形に強い色。個性と芯の強さが出る印象になります。"
     }
   };
-  var COLORS_BY_PC = {
-    "イエベ春": ["コーラルピンク","ピーチオレンジ","ライトキャメル","イエローゴールド","ターコイズ","若草グリーン"],
-    "ブルベ夏": ["ローズピンク","ラベンダー","ソフトブルー","ミントグリーン","グレージュ","パールホワイト"],
-    "イエベ秋": ["テラコッタ","マスタード","オリーブ","バーガンディ","ブロンズ","ディープオレンジ"],
-    "ブルベ冬": ["ロイヤルブルー","ワインレッド","フューシャピンク","エメラルド","シルバーグレー","クリアレッド"]
+  var TYPE_NAMES = {
+    "ストレート": {"イエベ春":"陽だまりストレート","ブルベ夏":"涼やかストレート","イエベ秋":"実りのストレート","ブルベ冬":"凛々ストレート"},
+    "ウェーブ": {"イエベ春":"花かげウェーブ","ブルベ夏":"水面ウェーブ","イエベ秋":"ぬくもりウェーブ","ブルベ冬":"凛とウェーブ"},
+    "ナチュラル": {"イエベ春":"のびやかナチュラル","ブルベ夏":"そよ風ナチュラル","イエベ秋":"大地のナチュラル","ブルベ冬":"凛のナチュラル"}
   };
-  var COLORS_BY_SEASON = {
-    spring: ["さくらピンク","ミモザイエロー","若草グリーン","スカイブルー","ピーチ","ライラック"],
-    summer: ["コーラル","ターコイズ","ホワイト","レモンイエロー","アクアブルー","ひまわりイエロー"],
-    autumn: ["ボルドー","マスタード","テラコッタ","オリーブ","キャメル","プラム"],
-    winter: ["ワインレッド","ロイヤルブルー","シルバーグレー","フューシャピンク","エメラルド","アイスブルー"]
-  };
-  var ITEMS = [
-    {name:"リップ", tail:"をひと塗り"},
-    {name:"ネイル", tail:"を指先に"},
-    {name:"チーク", tail:"をふわりと"},
-    {name:"アイシャドウ", tail:"をまぶたにひと色"},
-    {name:"スカーフ", tail:"を首元に"},
-    {name:"ポーチ", tail:"を持ち歩いて"}
+  var FACE_OPTS = [
+    {t:"柔らかく、親しみやすい", mod:"やわらかな"},
+    {t:"凛として、シャープ", mod:"凛とした"},
+    {t:"爽やかで、フレッシュ", mod:"爽やかな"},
+    {t:"大人っぽく、上品", mod:"上品な"}
   ];
-  function seasonKey(){
-    var m = Number(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",month:"numeric"}).format(new Date()));
-    if(m>=3 && m<=5) return "spring";
-    if(m>=6 && m<=8) return "summer";
-    if(m>=9 && m<=11) return "autumn";
-    return "winter";
+  var BONE_QS = [
+    {q:"上半身の印象に近いのは？", opts:["厚みとハリがある","華奢で柔らかい","骨がしっかりしている"]},
+    {q:"手の印象に近いのは？", opts:["手のひらに厚みがある","指が細く、関節が目立たない","関節や骨が目立つ"]},
+    {q:"しっくりくる素材は？", opts:["ハリのあるシャツ素材","とろみのある柔らかい素材","麻やデニムなどラフな素材"]}
+  ];
+  var PC_QS = [
+    {q:"肌の印象に近いのは？", opts:["明るく、血色がよく見える","透明感があり、涼しげ","落ち着いていて、黄みがある","澄んでいて、シャープ"]},
+    {q:"似合うと言われる色は？", opts:["コーラルやピーチなど明るい色","ラベンダーや淡いブルー","テラコッタやマスタード","ロイヤルブルーやワインレッド"]},
+    {q:"しっくりくるアクセサリーは？", opts:["明るいイエローゴールド","シルバーやパール","ブロンズやアンティーク調","はっきりしたシルバー"]},
+    {q:"黒い服を着たときは？", opts:["少し重く見えがち","なじんで柔らかく見える","黄みが強く出がち","輪郭がはっきりする"]}
+  ];
+  // 開運バフ資産（kaiun-buff/app-src/lib/fortune.ts）の完成テキストをそのまま複製
+  var SLOT_KEYS = ["morning","noon","night"];
+  var SLOT_LABEL = {morning:"朝のバフ", noon:"昼のバフ", night:"夜のバフ"};
+  var THEMES = [
+    {yy:"陽", el:"木", name:"青芽のテーマ", neko:"芽吹きの日だ。始めるなら今日だな。……応援してやる。", slots:{
+      morning:{name:"はじめの一歩バフ", action:"玄関を出る前に、今日やることを1つだけ声に出してみる", item:"木の箸", color:"若竹色"},
+      noon:{name:"伸びゆく枝バフ", action:"止まっていた連絡を1件だけ返してみる", item:"グリーンの付箋", color:"常盤色"},
+      night:{name:"芽吹き仕込みバフ", action:"明日の服を椅子にかけて、寝る準備を済ませておく", item:"木綿のタオル", color:"生成り色"}}},
+    {yy:"陽", el:"火", name:"灯火のテーマ", neko:"気持ちが上向く日だ。その灯り、大事にしろ。", slots:{
+      morning:{name:"朝日の灯バフ", action:"カーテンを全開にして、朝の光を顔に当てる", item:"オレンジの果物", color:"茜色"},
+      noon:{name:"あたため直しバフ", action:"温かい飲み物を両手で持って、ひと息つく", item:"湯呑み", color:"山吹色"},
+      night:{name:"灯りを落とすバフ", action:"寝る30分前に、部屋の照明を一段暗くする", item:"小さな間接照明", color:"琥珀色"}}},
+    {yy:"陽", el:"土", name:"実りのテーマ", neko:"コツコツが実る日だ。地味でも、進めば勝ちだな。", slots:{
+      morning:{name:"大地の足場バフ", action:"靴をそろえて置き、足元から一日を整える", item:"革の定期入れ", color:"黄土色"},
+      noon:{name:"積み上げバフ", action:"机の上を3分だけ片づけて、作業の山を小さくする", item:"小さな収納箱", color:"ベージュ"},
+      night:{name:"実りの仕分けバフ", action:"今日できたことを、メモに1行だけ残す", item:"手帳", color:"栗色"}}},
+    {yy:"陽", el:"金", name:"輝きのテーマ", neko:"磨けば光る日だ。少しの手入れで十分だぞ。", slots:{
+      morning:{name:"磨き上げバフ", action:"鏡を見ながら背筋を伸ばして、笑顔を1回作ってみる", item:"金属のヘアピン", color:"シャンパンゴールド"},
+      noon:{name:"輝き足しバフ", action:"お気に入りの小物を1つ身につけて出かける", item:"指輪やピアス", color:"真珠色"},
+      night:{name:"研ぎ澄ましバフ", action:"明日の持ち物を、玄関にまとめて置いておく", item:"ポーチ", color:"銀鼠色"}}},
+    {yy:"陽", el:"水", name:"潤いのテーマ", neko:"流れのよい日だ。無理に逆らうな、だ。", slots:{
+      morning:{name:"湧き水バフ", action:"起きてすぐ、コップ1杯の水を飲む", item:"ガラスのコップ", color:"水色"},
+      noon:{name:"流れをよくするバフ", action:"席を立って窓の外を眺め、深呼吸を3回する", item:"ミントタブレット", color:"浅葱色"},
+      night:{name:"静かな水面バフ", action:"お風呂で肩まで浸かって、今日の出来事を流す", item:"入浴剤", color:"藍色"}}},
+    {yy:"陰", el:"木", name:"新緑のテーマ", neko:"静かに伸びる日だ。焦らなくていい。それがお前の力だ。", slots:{
+      morning:{name:"若葉の静けさバフ", action:"ベランダや窓辺で、緑を1分眺める", item:"小さな観葉植物", color:"萌葱色"},
+      noon:{name:"木陰の休みバフ", action:"昼休みにスマホを置いて、目を閉じて休む", item:"アイマスク", color:"苔色"},
+      night:{name:"根を張るバフ", action:"今日がんばった自分に「おつかれさま」と声をかける", item:"温かいお茶", color:"抹茶色"}}},
+    {yy:"陰", el:"火", name:"月灯りのテーマ", neko:"やさしい温もりの日だ。誰かに分けると、もっと温かくなるぞ。", slots:{
+      morning:{name:"ほのかな灯バフ", action:"好きな香りをひと吹きしてから出かける", item:"ハンドクリーム", color:"珊瑚色"},
+      noon:{name:"ぬくもり分けバフ", action:"誰かに「ありがとう」を1回伝える", item:"温かい飲み物", color:"杏色"},
+      night:{name:"月灯りのバフ", action:"寝る前に、好きな音楽を1曲だけ聴く", item:"イヤホン", color:"藤色"}}},
+    {yy:"陰", el:"土", name:"大地のテーマ", neko:"休むための日だ。休むのも仕事のうちだな。", slots:{
+      morning:{name:"土の落ち着きバフ", action:"朝ごはんを座って、ゆっくり食べる", item:"陶器の器", color:"胡桃色"},
+      noon:{name:"ひと休みの土バフ", action:"お昼に5分だけ、外の空気を吸う", item:"日傘や帽子", color:"砂色"},
+      night:{name:"大地に還るバフ", action:"足裏をマッサージして、一日を労わる", item:"温かいタオル", color:"小豆色"}}},
+    {yy:"陰", el:"金", name:"星屑のテーマ", neko:"小さな輝きが見つかる日だ。見逃すなよ。", slots:{
+      morning:{name:"星屑の名残バフ", action:"ポケットに、小さなお守りやコインを入れて出かける", item:"小さなチャーム", color:"紺色"},
+      noon:{name:"磨き直しバフ", action:"財布の中のレシートを整理する", item:"財布", color:"白銀色"},
+      night:{name:"静かな輝きバフ", action:"明日の自分へ一言メモを書いて、枕元に置く", item:"メモ帳", color:"月白色"}}},
+    {yy:"陰", el:"水", name:"清流のテーマ", neko:"手放すと軽くなる日だ。……抱え込みすぎだ、お前は。", slots:{
+      morning:{name:"清流の洗いバフ", action:"顔を洗うときに、心の中で「リセット」と唱える", item:"白いタオル", color:"白色"},
+      noon:{name:"流れに任せるバフ", action:"詰まったら一度手を止めて、水を飲んで仕切り直す", item:"水筒", color:"群青色"},
+      night:{name:"手放しの水バフ", action:"今日の気がかりを紙に書いて、伏せて置いてから寝る", item:"紙とペン", color:"深い藍色"}}}
+  ];
+  var COLOR_HEX = {
+    "若竹色":"#68be8d","常盤色":"#007b43","生成り色":"#f0e9d6","茜色":"#e03c31","山吹色":"#f8b500","琥珀色":"#bf783a",
+    "黄土色":"#be9a3d","ベージュ":"#d9c6a5","栗色":"#7a4a21","シャンパンゴールド":"#dbc07a","真珠色":"#efeae0","銀鼠色":"#afafb0",
+    "水色":"#a0d8ef","浅葱色":"#00a3af","藍色":"#165e83","萌葱色":"#006e54","苔色":"#6b7c3f","抹茶色":"#c5c56a",
+    "珊瑚色":"#ef857d","杏色":"#f7b977","藤色":"#a59aca","胡桃色":"#9c7a54","砂色":"#dcd3b2","小豆色":"#96514d",
+    "紺色":"#25304b","白銀色":"#dedede","月白色":"#e3e8ec","白色":"#ffffff","群青色":"#465daa","深い藍色":"#0f2d4a"
+  };
+  function colorHex(name){ return COLOR_HEX[name] || "#c9a227"; }
+  function hashString(s){
+    var h = 0x811c9dc5;
+    for(var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return h >>> 0;
   }
-  var state = {bone:"", pc:"", sign:""};
+  function pad(n){ return (n<10?"0":"") + n; }
+  function jstParts(){
+    var fmt = new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",hour12:false,weekday:"short"});
+    var parts = {};
+    fmt.formatToParts(new Date()).forEach(function(p){ parts[p.type]=p.value; });
+    var wdMap = {Sun:"日",Mon:"月",Tue:"火",Wed:"水",Thu:"木",Fri:"金",Sat:"土"};
+    return { y:Number(parts.year), m:Number(parts.month), d:Number(parts.day), hour:Number(parts.hour)%24, wd:wdMap[parts.weekday]||"" };
+  }
+  function slotFromHour(hour){
+    if(hour>=5 && hour<12) return "morning";
+    if(hour>=12 && hour<18) return "noon";
+    return "night";
+  }
+  function dailyTheme(){
+    var j = jstParts();
+    var dateKey = j.y + "-" + pad(j.m) + "-" + pad(j.d);
+    var idx = hashString("kaiun-buff:" + dateKey) % THEMES.length;
+    return { dateLabel: j.y + "年" + j.m + "月" + j.d + "日（" + j.wd + "）", theme: THEMES[idx], baseSlot: slotFromHour(j.hour) };
+  }
+  function buffMeta(buff){
+    return "ラッキーアイテム：" + buff.item + "　ラッキーカラー：<span class=\"swatch\" style=\"background:" + colorHex(buff.color) + "\"></span>" + buff.color;
+  }
+  function renderToday(){
+    var d = dailyTheme();
+    document.getElementById("todayDate").textContent = d.dateLabel + "のテーマは「" + d.theme.yy + "・" + d.theme.el + "」";
+    document.getElementById("todayTheme").textContent = d.theme.name;
+    document.getElementById("todayNeko").textContent = "巫女ねこ：" + d.theme.neko;
+    var buff = d.theme.slots[d.baseSlot];
+    document.getElementById("todayBuffCap").textContent = SLOT_LABEL[d.baseSlot] + "（一般版）";
+    document.getElementById("todayBuffName").textContent = buff.name;
+    document.getElementById("todayBuffAction").textContent = buff.action;
+    document.getElementById("todayBuffMeta").innerHTML = buffMeta(buff);
+  }
+  function signFromBirth(month, day){
+    var t = month*100 + day;
+    if(t>=321 && t<=419) return "牡羊座";
+    if(t>=420 && t<=520) return "牡牛座";
+    if(t>=521 && t<=621) return "双子座";
+    if(t>=622 && t<=722) return "蟹座";
+    if(t>=723 && t<=822) return "獅子座";
+    if(t>=823 && t<=922) return "乙女座";
+    if(t>=923 && t<=1023) return "天秤座";
+    if(t>=1024 && t<=1122) return "蠍座";
+    if(t>=1123 && t<=1221) return "射手座";
+    if(t>=1222 || t<=119) return "山羊座";
+    if(t>=120 && t<=218) return "水瓶座";
+    return "魚座";
+  }
+  // プロフィール状態
+  var profile = { birth:"", boneAns:[], pcAns:[], face:-1 };
   try{
     var saved = JSON.parse(window.localStorage.getItem(KEY) || "null");
-    if(saved){ state.bone = saved.bone||""; state.pc = saved.pc||""; state.sign = saved.sign||""; }
+    if(saved){
+      profile.birth = saved.birth || "";
+      profile.boneAns = Array.isArray(saved.boneAns) ? saved.boneAns : [];
+      profile.pcAns = Array.isArray(saved.pcAns) ? saved.pcAns : [];
+      profile.face = (typeof saved.face === "number") ? saved.face : -1;
+    }
   }catch(e){}
+  function save(){
+    try{ window.localStorage.setItem(KEY, JSON.stringify(profile)); }catch(e){}
+  }
+  function majority(ans, count){
+    var score = [];
+    for(var i=0;i<count;i++) score.push(0);
+    ans.forEach(function(v){ if(v>=0 && v<count) score[v]++; });
+    var best = -1, bestScore = -1;
+    score.forEach(function(s, i){ if(s>bestScore){ bestScore=s; best=i; } });
+    if(ans.length && bestScore>0){
+      // 同数のときは1問目の回答を優先
+      var first = ans[0];
+      if(score[first] === bestScore) best = first;
+    }
+    return best;
+  }
+  function derived(){
+    if(profile.boneAns.length < 3 || profile.pcAns.length < 4) return null;
+    var bi = majority(profile.boneAns, 3);
+    var pi = majority(profile.pcAns, 4);
+    var bone = BONES[bi], pc = PCS[pi];
+    var sign = "";
+    if(profile.birth){
+      var bp = profile.birth.split("-");
+      if(bp.length===3) sign = signFromBirth(Number(bp[1]), Number(bp[2]));
+    }
+    return { boneIdx:bi, pcIdx:pi, bone:bone, pc:pc, sign:sign,
+      faceIdx: profile.face, face: profile.face>=0 ? FACE_OPTS[profile.face] : null };
+  }
+  // 質問フロー（進行開示型：骨格3問→PC4問→顔印象1問）
+  var STEPS = [];
+  BONE_QS.forEach(function(q, i){ STEPS.push({kind:"bone", idx:i, label:"骨格の質問 " + (i+1) + " / 3", q:q.q, opts:q.opts}); });
+  PC_QS.forEach(function(q, i){ STEPS.push({kind:"pc", idx:i, label:"パーソナルカラーの質問 " + (i+1) + " / 4", q:q.q, opts:q.opts}); });
+  STEPS.push({kind:"face", idx:0, label:"顔印象（自己申告）", q:"顔の印象に近いのは？", opts:FACE_OPTS.map(function(f){ return f.t; })});
+  var step = 0;
+  var qbox = document.getElementById("qbox");
+  var summaryBox = document.getElementById("profileSummary");
   var goBtn = document.getElementById("go");
-  function paint(){
-    document.querySelectorAll(".chips").forEach(function(group){
-      var g = group.getAttribute("data-group");
-      group.querySelectorAll(".chip").forEach(function(chip){
-        chip.classList.toggle("on", state[g] === chip.getAttribute("data-value"));
-      });
-    });
-    goBtn.disabled = !(state.bone || state.pc);
+  function currentAnswer(s){
+    if(s.kind==="bone") return profile.boneAns[s.idx];
+    if(s.kind==="pc") return profile.pcAns[s.idx];
+    return profile.face;
   }
-  document.querySelectorAll(".chips").forEach(function(group){
-    var g = group.getAttribute("data-group");
-    group.querySelectorAll(".chip").forEach(function(chip){
-      chip.addEventListener("click", function(){
-        var v = chip.getAttribute("data-value");
-        state[g] = (state[g] === v) ? "" : v;
-        try{ window.localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){}
-        paint();
+  function setAnswer(s, v){
+    if(s.kind==="bone") profile.boneAns[s.idx] = v;
+    else if(s.kind==="pc") profile.pcAns[s.idx] = v;
+    else profile.face = v;
+    save();
+  }
+  function paintStep(){
+    var s = STEPS[step];
+    document.getElementById("qprog").textContent = s.label + "（全8問）";
+    document.getElementById("qtext").textContent = s.q;
+    var box = document.getElementById("qopts");
+    box.innerHTML = "";
+    var cur = currentAnswer(s);
+    s.opts.forEach(function(label, v){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip" + (cur===v ? " on" : "");
+      b.textContent = label;
+      b.addEventListener("click", function(){
+        setAnswer(s, v);
+        if(step < STEPS.length-1){ step++; paintStep(); }
+        else { showSummary(); }
       });
+      box.appendChild(b);
     });
+    document.getElementById("qback").hidden = (step===0);
+  }
+  function showSummary(){
+    var d = derived();
+    qbox.hidden = true;
+    if(!d){ summaryBox.hidden = true; goBtn.disabled = true; return; }
+    summaryBox.hidden = false;
+    var txt = "骨格：" + d.bone + "／パーソナルカラー：" + d.pc;
+    if(d.face) txt += "／顔印象：" + d.face.t;
+    if(d.sign) txt += "／星座：" + d.sign;
+    document.getElementById("summaryText").textContent = txt;
+    goBtn.disabled = false;
+  }
+  function showFlow(fromStep){
+    step = fromStep || 0;
+    summaryBox.hidden = true;
+    qbox.hidden = false;
+    paintStep();
+  }
+  document.getElementById("qback").addEventListener("click", function(){
+    if(step>0){ step--; paintStep(); }
   });
-  function fortune(){
-    var dayIdx = Math.floor(Date.now()/86400000);
-    var signIdx = state.sign ? SIGNS.indexOf(state.sign) : 0;
-    var palette = state.pc ? COLORS_BY_PC[state.pc] : COLORS_BY_SEASON[seasonKey()];
-    var color = palette[(dayIdx + signIdx*2) % palette.length];
-    var item = ITEMS[(dayIdx*2 + signIdx) % ITEMS.length];
-    return { color: color, item: item };
+  document.getElementById("editProfile").addEventListener("click", function(){ showFlow(0); });
+  var birthInput = document.getElementById("birth");
+  function paintBirth(){
+    birthInput.value = profile.birth || "";
+    var line = document.getElementById("signLine");
+    if(profile.birth){
+      var bp = profile.birth.split("-");
+      if(bp.length===3){ line.textContent = "星座：" + signFromBirth(Number(bp[1]), Number(bp[2])) + "（生年月日から自動）"; return; }
+    }
+    line.textContent = "";
   }
+  birthInput.addEventListener("change", function(){
+    profile.birth = birthInput.value;
+    save();
+    paintBirth();
+    if(derived()) showSummary();
+  });
   function render(){
-    if(!(state.bone || state.pc)){ document.getElementById("result").hidden = true; return; }
-    var parts = [];
-    if(state.bone) parts.push(state.bone);
-    if(state.pc) parts.push(state.pc);
-    document.getElementById("resultTypes").textContent = "あなたのタイプは " + parts.join(" × ");
+    var d = derived();
+    var resultBox = document.getElementById("result");
+    if(!d){ resultBox.hidden = true; return; }
+    var typeName = TYPE_NAMES[d.bone][d.pc];
+    var fullName = (d.face ? d.face.mod : "") + typeName;
+    document.getElementById("resultTypes").textContent = "あなたのタイプは " + fullName;
     var html = "";
-    if(state.bone) html += '<div class="desc"><span class="dt">骨格：'+state.bone+'</span>　'+BONE_DESC[state.bone]+'</div>';
-    if(state.pc) html += '<div class="desc"><span class="dt">パーソナルカラー：'+state.pc+'</span>　'+PC_DESC[state.pc]+'</div>';
+    html += '<div class="desc"><span class="dt">骨格：' + d.bone + '</span>　' + BONE_DESC[d.bone] + '</div>';
+    html += '<div class="desc"><span class="dt">パーソナルカラー：' + d.pc + '</span>　' + PC_DESC[d.pc] + '</div>';
+    if(d.face) html += '<div class="desc"><span class="dt">顔印象：' + d.face.t + '</span>　タイプ名の「' + d.face.mod + '」は、この印象から付けています。</div>';
+    if(d.sign) html += '<div class="desc"><span class="dt">星座：' + d.sign + '</span>　生年月日から自動で決めています。</div>';
     document.getElementById("resultDescs").innerHTML = html;
     var comboBox = document.getElementById("comboBox");
-    if(state.bone && state.pc){
-      comboBox.hidden = false;
-      document.getElementById("comboText").textContent = COMBO[state.bone][state.pc];
-    } else { comboBox.hidden = true; }
-    var f = fortune();
-    document.getElementById("fortuneCap").textContent = state.sign ? (state.sign + "の今日の運勢（占い）") : "今日の運勢（占い）";
-    document.getElementById("fortuneLine").textContent = f.color + "の" + f.item.name + f.item.tail;
-    document.getElementById("fortuneNote").textContent = state.pc
-      ? "色は、あなたのパーソナルカラーの範囲から選んでいます。"
-      : "色は、季節の色から選んでいます。パーソナルカラーを選ぶと、その範囲に寄せて出します。";
-    document.getElementById("result").hidden = false;
+    comboBox.hidden = false;
+    document.getElementById("comboText").textContent = COMBO[d.bone][d.pc];
+    // 掛け合わせルール：テーマ（日付）× 時間帯（時刻の土台＋タイプのずらし）
+    var day = dailyTheme();
+    var baseIdx = SLOT_KEYS.indexOf(day.baseSlot);
+    var shift = (d.boneIdx + d.pcIdx + (d.faceIdx>=0 ? d.faceIdx : 0)) % 3;
+    var slotKey = SLOT_KEYS[(baseIdx + shift) % 3];
+    var buff = day.theme.slots[slotKey];
+    document.getElementById("fortuneCap").textContent = day.dateLabel + "の運勢と開運バフ（占い）";
+    document.getElementById("fortuneTheme").textContent = "今日のテーマは「" + day.theme.name + "」（" + day.theme.yy + "・" + day.theme.el + "）";
+    document.getElementById("fortuneNeko").textContent = "巫女ねこ：" + day.theme.neko;
+    document.getElementById("fortuneWhy").textContent = "テーマは日付で決まります。そのテーマに、あなたのタイプ（" + d.bone + "×" + d.pc + "）の巡りを重ねて、" + SLOT_LABEL[slotKey] + "を選びました。";
+    document.getElementById("buffCap").textContent = "あなたの今日のバフ｜" + SLOT_LABEL[slotKey];
+    document.getElementById("buffName").textContent = buff.name;
+    document.getElementById("buffAction").textContent = buff.action;
+    document.getElementById("buffMeta").innerHTML = buffMeta(buff);
+    resultBox.hidden = false;
   }
   goBtn.addEventListener("click", function(){
     render();
     document.getElementById("result").scrollIntoView({behavior:"smooth"});
   });
-  paint();
-  render();
+  renderToday();
+  paintBirth();
+  if(derived()){ showSummary(); render(); }
+  else { showFlow(0); }
 })();
 </script>
 </body>
